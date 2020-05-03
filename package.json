@@ -1,7 +1,7 @@
 {
   "name": "giphy-api",
   "version": "1.0.0",
-  "description": "An Express server that returns a GIF using the Giphy API. Default route returns a Chris Farley GIF.",
+  "description": "A server that returns a GIF using the Giphy API. Default route returns a Chris Farley GIF.",
   "type": "module",
   "main": "index.js",
   "scripts": {
