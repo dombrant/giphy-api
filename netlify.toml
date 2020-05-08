@@ -2,4 +2,4 @@
   functions = "./"
 [[redirects]]
   from = "/"
-  to = "/.netlify/index"
+  to = "/.netlify/functions/index"
