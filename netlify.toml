@@ -1,5 +1,5 @@
 [build]
   functions = "./functions"
 [[redirects]]
-  from = "/api"
+  from = "/"
   to = "/.netlify/functions/giphy-api"
