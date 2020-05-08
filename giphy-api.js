@@ -1,6 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import giphyApi from "giphy-js-sdk-core";
+import serverless from "serverless-http";
 
 const app = express();
 dotenv.config();
@@ -30,5 +31,5 @@ app.get("/:search", async (request, response) => {
 
 app.listen(3000, () => console.log("Server listening on port 3000"));
 
-export default app;
-// Export app for use in the Netlify function file
+export const handler = serverless(app);
+// For the Netlify function
