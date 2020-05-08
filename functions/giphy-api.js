@@ -1,7 +1,7 @@
-import express from "express";
-import dotenv from "dotenv";
-import giphyApi from "giphy-js-sdk-core";
-import serverless from "serverless-http";
+const express = require("express");
+const dotenv = require("dotenv");
+const giphyApi = require("giphy-js-sdk-core");
+const serverless = require("serverless-http");
 
 const app = express();
 dotenv.config();
