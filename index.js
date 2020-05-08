@@ -29,3 +29,6 @@ app.get("/:search", async (request, response) => {
 });
 
 app.listen(3000, () => console.log("Server listening on port 3000"));
+
+export default app;
+// Export app for use in the Netlify function file
