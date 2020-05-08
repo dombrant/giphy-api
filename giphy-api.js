@@ -31,5 +31,5 @@ app.get("/:search", async (request, response) => {
 
 app.listen(3000, () => console.log("Server listening on port 3000"));
 
-export const handler = serverless(app);
+exports.handler = serverless(app);
 // For the Netlify function
