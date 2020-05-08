@@ -22,6 +22,6 @@ exports.handler = async (event, context, callback) => {
       body: gif,
     });
   } catch (error) {
-    callback(`Error: ${error}`);
+    callback({ statusCode: 500, body: error });
   }
 };
