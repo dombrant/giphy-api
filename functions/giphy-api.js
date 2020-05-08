@@ -9,14 +9,19 @@ const gifRequest = async (query) => {
   const randomElement =
     request.data[Math.floor(Math.random() * request.data.length)];
 
-  return `<img src = ${randomElement.images.downsized_large.url}></img>`;
+  return randomElement.images.downsized_large.url;
 };
 
 exports.handler = async (event, context, callback) => {
-  const query = event.queryStringParameters.search || "chris+farley";
-  const gif = await gifRequest(query);
-  callback(null, {
-    statusCode: 200,
-    body: gif,
-  });
+  try {
+    const query = event.queryStringParameters.search || "chris+farley";
+    const gif = await gifRequest(query);
+
+    callback(null, {
+      statusCode: 200,
+      body: gif,
+    });
+  } catch (error) {
+    callback(`Error: ${error}`);
+  }
 };
