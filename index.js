@@ -12,16 +12,16 @@ const gifRequest = async (query) => {
   return randomElement.images.downsized_large.url;
 };
 
-exports.handler = async (event, context, callback) => {
+exports.handler = async (event, context) => {
   try {
     const query = event.queryStringParameters.search || "chris+farley";
     const gif = await gifRequest(query);
 
-    callback(null, {
+    return {
       statusCode: 200,
       body: gif,
-    });
+    };
   } catch (error) {
-    callback({ statusCode: 500, body: error });
+    return { statusCode: 500, body: error };
   }
 };
