@@ -6,7 +6,7 @@ A simple Node.js server that makes a request to the Giphy API. The request fetch
 
 **Dominic Brant**.
 
-[Follow me on Twitter](https://twitter.com/dombrant). If you have any thoughts/suggestions/problems, feel free to open an issue or Tweet me.
+If you have any thoughts/suggestions/problems, feel free to open an [issue](https://github.com/dombrant/giphy-api/issues).
 
 ## License
 
